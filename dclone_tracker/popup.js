@@ -4,6 +4,9 @@ let regionDict = {1:"Americas",2:"Europe",3:"Asia"};
 let totalDCloneProgress = 6;
 
 function tracking(){
+
+  chrome.action.setBadgeText ( { text: '' } );
+  
   console.log("loading..")
   fetch('https://diablo2.io/dclone_api.php').then(result => {
       if(result.status === 200){

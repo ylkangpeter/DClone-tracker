@@ -23,6 +23,10 @@ function looping() {
         var msg = ""; 
         for (let result of results) {
           if(result.progress>=alertLevel){
+
+            chrome.action.setBadgeText ( { text: 'NEW' } );
+            chrome.action.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
+            
             msg = "Prime evil is coming!";
             // may add some details in msg later.
             toPopup(msg);
