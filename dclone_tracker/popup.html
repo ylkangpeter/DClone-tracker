@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="button.css">
+
+    <style type="text/css">
+
+      .container {
+        max-width: 4em;
+        margin: 0 auto;
+      }
+
+      .progress-segment {
+        display: flex;
+      }
+
+      .item {
+        width: 100%;
+        background-color: lightgray;
+        margin-right: 2px;
+        height: 8px;
+      }
+      .item:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      .item:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+      .item.my-common {
+        background: #FF3390 !important;
+      }
+
+      .styled-table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        margin-bottom: 3em;
+      }
+      .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 2px 15px;
+    }
+    .styled-table tbody tr {
+        border-bottom: thin solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 1px solid #000000;
+    }
+
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <h3 style="text-align: center;">All data from <a href="https://diablo2.io/">diablo2.io</a> dclone tracker. <a href="https://diablo2.io/forums/diablo-clone-uber-diablo-tracker-public-api-t906872.html"> API</a></h3>
+    <div style="width: 650px;" id="dCloneProgress">loading...</div>
+    <script src="util.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
