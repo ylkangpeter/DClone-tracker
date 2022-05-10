@@ -1,4 +1,4 @@
-# An chrome plugin Diablo Clone tracker
+# A chrome plugin Diablo Clone tracker
 
-![](/img/screenshot.png)
-![](/img/notification.png)
+![](./img/screenshot.png)
+![](./img/notification.png)
