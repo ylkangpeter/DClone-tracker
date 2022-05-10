@@ -1,1 +1,2 @@
-# DClone-tracker
+# An chrome plugin Diablo Clone tracker
+
