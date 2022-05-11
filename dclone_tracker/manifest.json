@@ -8,7 +8,8 @@
   },
   "permissions": ["storage", "activeTab", "scripting", "webRequest", "notifications"],
   "host_permissions": [
-        "https://diablo2.io/"
+        "https://diablo2.io/",
+        "https://forums.d2jsp.org/"
   ],
   "action": {
     "default_popup": "popup.html",
