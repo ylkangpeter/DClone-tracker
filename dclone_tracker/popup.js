@@ -114,6 +114,9 @@ function addListener() {
     if (e.target.tagName == 'INPUT') {
       var newStat = e.target.checked;
       var stats = await chrome.storage.local.get(LOCAL_KEY);
+      if(!stats[LOCAL_KEY]){
+      	stats[LOCAL_KEY]={}
+      }
       stats[LOCAL_KEY][e.target.dataset.innerAttr] = newStat;
       chrome.storage.local.set(stats);
     }
@@ -142,7 +145,7 @@ function addListener() {
 
 async function getStatus(key) {
   var stats = await chrome.storage.local.get(LOCAL_KEY);
-  if(stats && stats[key]){
+  if(stats && stats[LOCAL_KEY]){
   	console.log(stats[key])
   	return stats[LOCAL_KEY][key];
   }else{
