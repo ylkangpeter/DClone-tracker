@@ -142,8 +142,12 @@ function addListener() {
 
 async function getStatus(key) {
   var stats = await chrome.storage.local.get(LOCAL_KEY);
-  console.log(stats[key] || false)
-  return stats[LOCAL_KEY][key] || false;
+  if(stats && stats[key]){
+  	console.log(stats[key])
+  	return stats[LOCAL_KEY][key];
+  }else{
+  	return false;
+  }
 }
 
 initConfig();
